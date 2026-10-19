@@ -10,7 +10,7 @@ public class Lotto {
         ArrayList<Integer> user_numbers = new ArrayList<>();
         Random r = new Random();
         int trafione = 0;
-        int count = 0;
+        long count = 0;
 
         int liczba_powt = 10;
         long czas = 0;
@@ -20,6 +20,7 @@ public class Lotto {
         }
         for (int k=0; k < liczba_powt; k++) {
             long start = System.currentTimeMillis();
+            trafione = 0;
             while (trafione != 6) {
 
                 trafione = 0;

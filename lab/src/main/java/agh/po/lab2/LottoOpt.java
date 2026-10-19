@@ -9,7 +9,7 @@ public class LottoOpt {
         ArrayList<Integer> numbers = new ArrayList<>();
         ArrayList<Integer> user_numbers = new ArrayList<>();
         Random r = new Random();
-        int count = 0;
+        long count = 0;
 
         int liczba_powt = 10;
         long czas = 0;
