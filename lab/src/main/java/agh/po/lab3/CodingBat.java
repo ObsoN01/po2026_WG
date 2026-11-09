@@ -1,5 +1,8 @@
 package agh.po.lab3;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CodingBat {
 //    Warmup1
     public boolean icyHot(int temp1, int temp2) {
@@ -61,17 +64,59 @@ public class CodingBat {
         return false;
     }
 
+    public Map<String, String> mapAB4(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            String aVal = map.get("a");
+            String bVal = map.get("b");
+
+            int lenA = aVal.length();
+            int lenB = bVal.length();
+
+            if (lenA > lenB) {
+                map.put("c", aVal);
+            } else if (lenB > lenA) {
+                map.put("c", bVal);
+            } else {
+                map.put("a", "");
+                map.put("b", "");
+            }
+        }
+        return map;
+    }
+
+    public Map<String, String> pairs(String[] strings) {
+        Map<String, String> map = new HashMap<>();
+
+        for (String s : strings) {
+            if (s.length() < 1) {
+                continue;
+            }
+            String first = String.valueOf(s.charAt(0));
+            String last = String.valueOf(s.charAt(s.length() - 1));
+            map.put(first, last);
+        }
+
+        return map;
+    }
+
     public static void main(String[] args) {
         CodingBat cb = new CodingBat();
 
-        System.out.println(cb.icyHot(120, -1));
+        Map<String, String> testMap = new HashMap<>();
+        testMap.put("a", "aa");
+        testMap.put("b", "bbb");
+        testMap.put("c", "cake");
 
-        System.out.println(cb.in1020(12, 99));
+        System.out.println(cb.mapAB4(testMap));
 
-        System.out.println(cb.has22(new int[]{1,2,2}));
-
-        System.out.println(cb.array123(new int[]{1,2,2}));
-
-        System.out.println(cb.right2("Hello2"));
+//        System.out.println(cb.icyHot(120, -1));
+//
+//        System.out.println(cb.in1020(12, 99));
+//
+//        System.out.println(cb.has22(new int[]{1,2,2}));
+//
+//        System.out.println(cb.array123(new int[]{1,2,2}));
+//
+//        System.out.println(cb.right2("Hello2"));
     }
 }

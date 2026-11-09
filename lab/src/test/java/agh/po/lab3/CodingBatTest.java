@@ -2,6 +2,9 @@ package agh.po.lab3;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class CodingBatTest {
@@ -68,5 +71,66 @@ public class CodingBatTest {
         assertEquals(false, cb.array123(new int[]{1, 2}));
         assertEquals(false, cb.array123(new int[]{1}));
         assertEquals(false, cb.array123(new int[]{}));
+    }
+
+    @Test
+    public void mapAB4() {
+        // Przykład 1: różne długości
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("a", "aaa");
+        map1.put("b", "bb");
+        map1.put("c", "cake");
+
+        Map<String, String> expected1 = new HashMap<>();
+        expected1.put("a", "aaa");
+        expected1.put("b", "bb");
+        expected1.put("c", "aaa");
+
+        assertEquals(expected1, cb.mapAB4(map1));
+
+        // Przykład 2: równe długości (a i b stają się pustymi stringami)
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("a", "aa");
+        map2.put("b", "bbb");
+        map2.put("c", "cake");
+
+        Map<String, String> expected2 = new HashMap<>();
+        expected2.put("a", "aa");
+        expected2.put("b", "bbb");
+        expected2.put("c", "bbb");
+
+        assertEquals(expected2, cb.mapAB4(map2));
+    }
+
+    @Test
+    public void pairs() {
+        String[] input1 = {"code", "bug"};
+        Map<String, String> expected1 = new HashMap<>();
+        expected1.put("b", "g");
+        expected1.put("c", "e");
+        assertEquals(expected1, cb.pairs(input1));
+
+        String[] input2 = {"man", "moon", "good", "night"};
+        Map<String, String> expected2 = new HashMap<>();
+        expected2.put("g", "d");
+        expected2.put("m", "n");
+        expected2.put("n", "t");
+        assertEquals(expected2, cb.pairs(input2));
+
+        String[] input4 = {"are", "codes", "and", "cods"};
+        Map<String, String> expected4 = new HashMap<>();
+        expected4.put("a", "d");
+        expected4.put("c", "s");
+        assertEquals(expected4, cb.pairs(input4));
+
+        String[] input5 = {};
+        Map<String, String> expected5 = new HashMap<>();
+        assertEquals(expected5, cb.pairs(input5));
+
+        String[] input6 = {"", "codes", "and", "cods"};
+        Map<String, String> expected6 = new HashMap<>();
+        expected6.put("a", "d");
+        expected6.put("c", "s");
+        assertEquals(expected6, cb.pairs(input6));
     }
 }
