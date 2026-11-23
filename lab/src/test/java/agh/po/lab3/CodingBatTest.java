@@ -25,6 +25,8 @@ public class CodingBatTest {
         assertEquals(true, cb.in1020(12, 99));
         assertEquals(true, cb.in1020(21, 12));
         assertEquals(false, cb.in1020(8, 99));
+        assertEquals(true, cb.in1020(8, 15));   // łapie wcześniejszy błąd
+        assertEquals(false, cb.in1020(21, 5));  // łapie wcześniejszy błąd
         assertEquals(true, cb.in1020(99, 10));
         assertEquals(true, cb.in1020(20, 20));
         assertEquals(false, cb.in1020(21, 21));
