@@ -65,7 +65,7 @@ Kamil Pałka, Aleksander Nowakowski
 27) Symulator Zarządzania Drużyną Sportową (Manager): Skład zawodników o statystykach, budżet transferowy, plan meczów i symulacja wyników na podstawie atrybutów.
 
 28) Gra Karciana Deckbuilding (np. w stylu Dominion): Budowanie talii w trakcie gry, fazy tur, efekty kart wzajemnie na siebie oddziałujące.
-
+Bartosz Myśliwiec, Przemysław Pakuła
 29) System Generowania Losowych Lochów (Procedural Dungeon Generator): Algorytm generujący połączone pomieszczenia i korytarze, rozmieszczenie przeciwników/skarbów według reguł.
 Jakub Kłucjasz, Bartosz Skowroński
 30) Gra Logiczna Puzzle z Mechaniką Grawitacji (np. typu "2048" lub "Match-3"): Plansza z klockami, reguły łączenia/znikania, system punktacji i poziom trudności.
@@ -108,3 +108,6 @@ System Wykrywania i Analizy Zagrożeń Bezpieczeństwa (Mini SIEM): Analiza log�
 Komunikator tekstowy klient-serwer z szyfrowaniem wiadomości z wykorzystaniem RSA i AES, przesyłanie plików, system kont i znajomych - Bartosz Bielawski, Mateusz Stokowiec
 
 50) Rekreacja gry Bomberman (NES 1985) - Kamil Deptalski, indywidualnie
+
+51) Anonimowy czat wykładowy - anonimowe zadawanie pytań wykładowcy, ankieta poziomu zrozumienia
+Kamil Gawęda, Jakub Czupryna
